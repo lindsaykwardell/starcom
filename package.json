@@ -1,0 +1,66 @@
+{
+  "name": "starcom-server",
+  "version": "0.1.0",
+  "description": "Star Commander Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production forever dist/index.js",
+    "dev": "nodemon -e ts",
+    "server-dev": "cross-env NODE_ENV=development ts-node ./src/index.ts",
+    "build": "tsc",
+    "lint": "tslint --project ./",
+    "swagger": "swaggerGen -c ./swaggerConfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/lodash.clonedeep": "^4.5.6",
+    "@types/node": "^12.12.25",
+    "@types/redis": "^2.8.14",
+    "@types/socket.io": "^2.1.4",
+    "@types/uuid": "^3.4.6",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.6.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "chalk": "^2.4.2",
+    "consoleback": "^0.2.1",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "forever": "^1.0.1",
+    "https-proxy-agent": "^3.0.1",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.24.0",
+    "mssql": "^5.1.0",
+    "natural-order": "^0.3.0",
+    "redis": "^2.8.0",
+    "redux": "^4.0.5",
+    "reflect-metadata": "^0.1.13",
+    "socket.io": "^2.3.0",
+    "typeorm": "^0.2.22",
+    "typescript-rest": "^2.2.2",
+    "typescript-rest-swagger": "^1.0.4",
+    "uuid": "^3.4.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "exec": "npm run server-dev",
+    "watch": [
+      "src"
+    ],
+    "ext": "ts"
+  }
+}
