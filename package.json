@@ -8,7 +8,7 @@
     "dev": "concurrently \"yarn serve\" \"yarn --cwd client run serve\"",
     "serve": "nodemon -e ts",
     "server-dev": "cross-env NODE_ENV=development ts-node ./src/index.ts",
-    "build": "yarn --cwd client run build && tsc",
+    "build": "yarn --cwd client run install && yarn --cwd client run build && tsc",
     "lint": "tslint --project ./",
     "swagger": "swaggerGen -c ./swaggerConfig.json"
   },
