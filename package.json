@@ -1,13 +1,14 @@
 {
-  "name": "starcom-server",
+  "name": "starcom",
   "version": "0.1.0",
-  "description": "Star Commander Server",
+  "description": "Star Commander",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production forever dist/index.js",
+    "start": "cross-env NODE_ENV=production forever build/index.js",
+    "dev": "concurrently \"yarn serve\" \"yarn --cwd client run serve\"",
     "serve": "nodemon -e ts",
     "server-dev": "cross-env NODE_ENV=development ts-node ./src/index.ts",
-    "build": "tsc",
+    "build": "yarn --cwd client run build && tsc",
     "lint": "tslint --project ./",
     "swagger": "swaggerGen -c ./swaggerConfig.json"
   },
@@ -21,6 +22,7 @@
     "@types/redis": "^2.8.14",
     "@types/socket.io": "^2.1.4",
     "@types/uuid": "^3.4.6",
+    "concurrently": "^5.2.0",
     "cross-env": "^5.2.0",
     "nodemon": "^1.19.4",
     "ts-node": "^8.6.2",

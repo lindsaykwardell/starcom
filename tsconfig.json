@@ -6,7 +6,7 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "build",
     "baseUrl": ".",
     "jsx": "preserve",
     "lib": ["es2015", "es5", "es6", "esnext.asynciterable", "dom"],
