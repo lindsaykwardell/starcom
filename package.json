@@ -48,7 +48,7 @@
     "moment": "^2.24.0",
     "mssql": "^5.1.0",
     "natural-order": "^0.3.0",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "redux": "^4.0.5",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^2.3.0",
