@@ -52,7 +52,7 @@
     "redux": "^4.0.5",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^2.3.0",
-    "typeorm": "^0.2.22",
+    "typeorm": "^0.2.25",
     "typescript-rest": "^2.2.2",
     "typescript-rest-swagger": "^1.0.4",
     "uuid": "^3.4.0"
